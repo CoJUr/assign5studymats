@@ -19,9 +19,27 @@ int main()
    i1 = 10;
 
    // assigning the number 20 to the int at the memory location i2
-    *i2 = 20;
+   *i2 = 20;
 
     /* Print them out to see the difference. Note that i2 will print out the memory location of the int, not the int itself. the * infront of i2 is a dereference operator, which means access the location the pointer is pointing to.
     */
    cout << "The # in i1: " << i1 << endl;
+   cout << "The # in the location  i2 is pointing to: " << *i2 << endl;
+   cout << endl; // just to make it look nice
+
+    /* Can also access the memory location of i1 by using the & operator. This is the address of operator. It will return the memory location of the variable. i2 is already a memory location, so no need to use the & operator on it, can use it as-is.
+    */
+    cout << "The memory location of i1: " << long(&i1) << endl;
+
+
+
+
+
+    /* using memory addresses allows passing by reference. Can then alter a variable directly in a function
+    and don't have to return it, as its altered directly through the address. Especially useful for arrays and large data sets.
+    */
+   cout << "The number in i1 before add_100 was.... " << i1 << endl;
+
+
+
 }
